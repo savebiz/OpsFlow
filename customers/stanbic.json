@@ -1,0 +1,32 @@
+{
+  "client_name": "Stanbic IBTC",
+  "project_name": "Stanbic IBTC Records - Ilupeju Phase",
+  "contract_start": "2026-07-01",
+  "contract_end": "2026-09-30",
+  "sla": {
+    "daily_minimum_boxes": 180,
+    "weekly_target_boxes": 1000,
+    "total_deliverable_boxes": 12000,
+    "quality_threshold_percent": 98.5,
+    "max_report_submission_delay_hours": 2
+  },
+  "location": "Ilupeju, Lagos",
+  "activity_type": "Scanning & Indexing",
+  "container_unit": "Boxes",
+  "assigned_team_leads": ["adebayo-okonkwo", "chidinma-nwachukwu"],
+  "team_lead_schedules": {
+    "adebayo-okonkwo": {
+      "working_days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "shift": "08:00-17:00 WAT"
+    },
+    "chidinma-nwachukwu": {
+      "working_days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+      "shift": "08:00-17:00 WAT"
+    }
+  },
+  "escalation_contacts": {
+    "primary": "Godwin Okafor (Head of Client Services)",
+    "secondary": "Victor (Operations Director)"
+  },
+  "notes": "High-priority banking records. Scanner maintenance scheduled every 2 weeks. Client liaison: Mr. Taiwo (Stanbic Records Dept)."
+}

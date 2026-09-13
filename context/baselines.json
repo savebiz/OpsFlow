@@ -1,0 +1,88 @@
+{
+  "projects": {
+    "stanbic-ibtc-ilupeju": {
+      "name": "Stanbic IBTC Records - Ilupeju Phase",
+      "client": "Stanbic IBTC",
+      "activity_type": "Scanning & Indexing",
+      "container_unit": "Boxes",
+      "daily_baseline": {
+        "boxes": 200,
+        "files": 1500,
+        "pages": 5000,
+        "indexing": 4500
+      },
+      "target_velocity": {
+        "total_boxes": 12000,
+        "completion_weeks": 12,
+        "weekly_target_boxes": 1000
+      },
+      "anomaly_thresholds": {
+        "max_multiplier": 3.0,
+        "min_multiplier": 0.1
+      }
+    },
+    "airtel-nigeria-archives": {
+      "name": "Airtel Nigeria Archives",
+      "client": "Airtel Nigeria",
+      "activity_type": "Physical Archiving",
+      "container_unit": "Bags",
+      "daily_baseline": {
+        "boxes": 150,
+        "files": 800,
+        "pages": 0,
+        "indexing": 0
+      },
+      "target_velocity": {
+        "total_boxes": 9000,
+        "completion_weeks": 10,
+        "weekly_target_boxes": 900
+      },
+      "anomaly_thresholds": {
+        "max_multiplier": 3.0,
+        "min_multiplier": 0.1
+      }
+    },
+    "first-bank-digitization": {
+      "name": "First Bank Digitization",
+      "client": "First Bank of Nigeria",
+      "activity_type": "Scanning",
+      "container_unit": "Boxes",
+      "daily_baseline": {
+        "boxes": 180,
+        "files": 1200,
+        "pages": 8000,
+        "indexing": 0
+      },
+      "target_velocity": {
+        "total_boxes": 10800,
+        "completion_weeks": 12,
+        "weekly_target_boxes": 900
+      },
+      "anomaly_thresholds": {
+        "max_multiplier": 3.0,
+        "min_multiplier": 0.1
+      }
+    },
+    "majekodunmi-indexing": {
+      "name": "Majekodunmi & Associates Indexing",
+      "client": "Majekodunmi & Associates",
+      "activity_type": "Indexing",
+      "container_unit": "Crates",
+      "daily_baseline": {
+        "boxes": 300,
+        "files": 2000,
+        "pages": 0,
+        "indexing": 6000
+      },
+      "target_velocity": {
+        "total_boxes": 15000,
+        "completion_weeks": 10,
+        "weekly_target_boxes": 1500
+      },
+      "anomaly_thresholds": {
+        "max_multiplier": 3.0,
+        "min_multiplier": 0.1
+      }
+    }
+  }
+}

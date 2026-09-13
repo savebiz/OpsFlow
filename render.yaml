@@ -1,0 +1,44 @@
+# Render Blueprint Manifest — OpsFlow
+# DataGuard Document Management Limited
+# Deploys both FastAPI Backend and Next.js Frontend on Render (Zero-cost free tier)
+
+services:
+  # 1. OpsFlow FastAPI Backend (Docker)
+  - type: web
+    name: opsflow-backend
+    runtime: docker
+    dockerfilePath: ./Dockerfile.backend
+    context: .
+    region: oregon
+    plan: free
+    healthCheckPath: /
+    envVars:
+      - key: PORT
+        value: "8000"
+      - key: SECRET_KEY
+        generateValue: true
+      - key: ALLOWED_ORIGINS
+        value: "*"
+      - key: TWILIO_ACCOUNT_SID
+        sync: false
+      - key: TWILIO_AUTH_TOKEN
+        sync: false
+      - key: TWILIO_WHATSAPP_NUMBER
+        value: "whatsapp:+14155238886"
+
+  # 2. OpsFlow Next.js Frontend (Node.js)
+  - type: web
+    name: opsflow-frontend
+    runtime: node
+    region: oregon
+    plan: free
+    rootDir: app/frontend
+    buildCommand: npm install && npm run build
+    startCommand: npm run start
+    envVars:
+      - key: NEXT_PUBLIC_API_URL
+        fromService:
+          type: web
+          name: opsflow-backend
+          property: url
+          suffix: /api

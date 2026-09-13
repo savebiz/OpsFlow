@@ -1,0 +1,41 @@
+version: "3.8"
+
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile.backend
+    container_name: opsflow-backend-prod
+    ports:
+      - "8000:8000"
+    environment:
+      - PORT=8000
+      - SECRET_KEY=${SECRET_KEY:-dataguard_production_secret_key_2026_x89a}
+      - ALLOWED_ORIGINS=${ALLOWED_ORIGINS:-http://localhost:3000,https://opsflow.dataguardng.com}
+      - TWILIO_ACCOUNT_SID=${TWILIO_ACCOUNT_SID}
+      - TWILIO_AUTH_TOKEN=${TWILIO_AUTH_TOKEN}
+      - TWILIO_WHATSAPP_NUMBER=${TWILIO_WHATSAPP_NUMBER}
+    volumes:
+      - opsflow_data:/app/context
+    restart: always
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/')"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile.frontend
+    container_name: opsflow-frontend-prod
+    ports:
+      - "3000:3000"
+    environment:
+      - NEXT_PUBLIC_API_URL=http://backend:8000/api
+    depends_on:
+      - backend
+    restart: always
+
+volumes:
+  opsflow_data:

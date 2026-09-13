@@ -1,0 +1,27 @@
+version: '3.8'
+
+services:
+  archiveops-backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: archiveops-api
+    ports:
+      - "8000:8000"
+    environment:
+      - ARCHIVEOPS_SECRET_KEY=dataguard-archiveops-jwt-secret-key-2026
+      - PORT=8000
+    restart: always
+
+  archiveops-frontend:
+    build:
+      context: ./app/frontend
+      dockerfile: Dockerfile
+    container_name: archiveops-ui
+    ports:
+      - "3000:3000"
+    environment:
+      - NEXT_PUBLIC_API_URL=http://localhost:8000/api
+    depends_on:
+      - archiveops-backend
+    restart: always

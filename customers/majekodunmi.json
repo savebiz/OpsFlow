@@ -1,0 +1,32 @@
+{
+  "client_name": "Majekodunmi & Associates",
+  "project_name": "Majekodunmi & Associates Indexing",
+  "contract_start": "2026-08-15",
+  "contract_end": "2026-11-01",
+  "sla": {
+    "daily_minimum_boxes": 250,
+    "weekly_target_boxes": 1500,
+    "total_deliverable_boxes": 15000,
+    "quality_threshold_percent": 99.0,
+    "max_report_submission_delay_hours": 2
+  },
+  "location": "Ikeja, Lagos",
+  "activity_type": "Indexing",
+  "container_unit": "Crates",
+  "assigned_team_leads": ["folake-bakare", "ibrahim-yusuf"],
+  "team_lead_schedules": {
+    "folake-bakare": {
+      "working_days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "shift": "08:00-17:00 WAT"
+    },
+    "ibrahim-yusuf": {
+      "working_days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+      "shift": "08:00-17:00 WAT"
+    }
+  },
+  "escalation_contacts": {
+    "primary": "Godwin Okafor (Head of Client Services)",
+    "secondary": "Victor (Operations Director)"
+  },
+  "notes": "Legal document indexing. High accuracy requirements. Crates contain legacy paper files requiring careful handling. Indexing by date, case number, and party names."
+}

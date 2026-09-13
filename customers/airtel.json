@@ -1,0 +1,28 @@
+{
+  "client_name": "Airtel Nigeria",
+  "project_name": "Airtel Nigeria Archives",
+  "contract_start": "2026-08-01",
+  "contract_end": "2026-10-15",
+  "sla": {
+    "daily_minimum_boxes": 130,
+    "weekly_target_boxes": 900,
+    "total_deliverable_boxes": 9000,
+    "quality_threshold_percent": 97.0,
+    "max_report_submission_delay_hours": 3
+  },
+  "location": "Victoria Island, Lagos",
+  "activity_type": "Physical Archiving",
+  "container_unit": "Bags",
+  "assigned_team_leads": ["emeka-adeyemi"],
+  "team_lead_schedules": {
+    "emeka-adeyemi": {
+      "working_days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "shift": "09:00-18:00 WAT"
+    }
+  },
+  "escalation_contacts": {
+    "primary": "Godwin Okafor (Head of Client Services)",
+    "secondary": "Victor (Operations Director)"
+  },
+  "notes": "Physical archive transfer from Airtel warehouse. Bags labeled by department. No scanning required — archiving only."
+}
