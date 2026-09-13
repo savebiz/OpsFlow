@@ -37,8 +37,4 @@ services:
     startCommand: npm run start
     envVars:
       - key: NEXT_PUBLIC_API_URL
-        fromService:
-          type: web
-          name: opsflow-backend
-          property: url
-          suffix: /api
+        value: https://opsflow-backend.onrender.com/api
