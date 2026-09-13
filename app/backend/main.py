@@ -21,7 +21,7 @@ import uvicorn
 import uuid
 
 
-from app.backend.models import DailyReportSubmission, ReviewAction, LoginRequest, UserShiftUpdate
+from app.backend.models import DailyReportSubmission, ReviewAction, LoginRequest, UserShiftUpdate, Project
 from app.backend.auth import create_token, verify_token, get_current_user, require_role
 from app.backend.google_sheets_db import get_all, get_by_id, insert, update, query, count
 from app.backend.hooks.pre_commit_hook import validate_report
@@ -463,7 +463,6 @@ def check_anomaly(project_id: str, field: str, value: int):
 def get_projects():
     """List all active projects with health scores."""
     projects = get_all("projects")
-    # Enrich with report counts
     reports = get_all("reports")
     for p in projects:
         pid = p.get("id")
@@ -473,6 +472,59 @@ def get_projects():
         p["total_pages_processed"] = sum(r.get("pages_count", 0) for r in p_reports)
         p["report_count"] = len(p_reports)
     return projects
+
+
+@app.get("/api/projects/my-projects")
+def get_my_projects(user_email: Optional[str] = None, user_id: Optional[str] = None):
+    """List projects assigned to the specific team lead (USEREMAIL Security Scoping)."""
+    all_projects = get_projects()
+    if not user_email and not user_id:
+        return all_projects
+        
+    filtered = []
+    for p in all_projects:
+        assigned_email = p.get("assigned_lead_email", "")
+        if user_email and assigned_email.lower() == user_email.lower():
+            filtered.append(p)
+        elif user_id:
+            user = get_by_id("users", user_id)
+            if user and p.get("id") in user.get("assigned_projects", []):
+                filtered.append(p)
+                
+    # Fallback if no matching user filters found
+    return filtered if filtered else all_projects
+
+
+@app.post("/api/projects")
+def create_project(project: Project):
+    """Admin endpoint to create a new project with custom container unit & dynamic metric rules."""
+    p_dict = project.dict()
+    if not p_dict.get("id"):
+        p_dict["id"] = f"p-{uuid.uuid4().hex[:6]}"
+    insert("projects", p_dict)
+    
+    # Also update user assigned_projects if assigned_lead_email matches
+    if project.assigned_lead_email:
+        users = get_all("users")
+        for u in users:
+            if u.get("email", "").lower() == project.assigned_lead_email.lower():
+                assigned = u.get("assigned_projects", [])
+                if p_dict["id"] not in assigned:
+                    assigned.append(p_dict["id"])
+                    update("users", u["id"], {"assigned_projects": assigned})
+                    
+    return {"status": "SUCCESS", "message": "Project created successfully", "project": p_dict}
+
+
+@app.put("/api/projects/{project_id}")
+def update_project(project_id: str, updates: Dict[str, Any]):
+    """Admin endpoint to update project configuration."""
+    project = get_by_id("projects", project_id)
+    if not project:
+        raise HTTPException(status_code=404, detail="Project not found")
+        
+    update("projects", project_id, updates)
+    return {"status": "SUCCESS", "message": "Project updated successfully"}
 
 
 @app.get("/api/projects/{project_id}")

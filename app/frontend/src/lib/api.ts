@@ -66,6 +66,10 @@ export interface Project {
   client_name: string;
   activity_type: string;
   container_unit: string;
+  assigned_lead_email?: string;
+  requires_page_count?: boolean;
+  requires_indexing_count?: boolean;
+  sla_target_date?: string;
   target_velocity: number;
   daily_baseline_boxes: number;
   daily_baseline_files: number;
@@ -87,12 +91,38 @@ export async function fetchProjects(): Promise<Project[]> {
     return await apiFetch<Project[]>("/projects");
   } catch {
     return [
-      { id: "p1", name: "Stanbic IBTC Records - Ilupeju Phase", client_name: "Stanbic IBTC", activity_type: "Scanning & Indexing", container_unit: "Boxes", target_velocity: 200, daily_baseline_boxes: 200, daily_baseline_files: 1500, daily_baseline_pages: 5000, daily_baseline_indexing: 4500, total_target: 12000, weekly_target: 1000, status: "Active", health: "Green", completion_percent: 45 },
-      { id: "p2", name: "Airtel Nigeria Archives", client_name: "Airtel Nigeria", activity_type: "Physical Archiving", container_unit: "Bags", target_velocity: 150, daily_baseline_boxes: 150, daily_baseline_files: 800, daily_baseline_pages: 0, daily_baseline_indexing: 0, total_target: 9000, weekly_target: 900, status: "Active", health: "Green", completion_percent: 38 },
-      { id: "p3", name: "First Bank Digitization", client_name: "First Bank of Nigeria", activity_type: "Scanning", container_unit: "Boxes", target_velocity: 180, daily_baseline_boxes: 180, daily_baseline_files: 1200, daily_baseline_pages: 8000, daily_baseline_indexing: 0, total_target: 10800, weekly_target: 900, status: "Active", health: "Yellow", completion_percent: 30 },
-      { id: "p4", name: "Majekodunmi & Associates Indexing", client_name: "Majekodunmi & Associates", activity_type: "Indexing", container_unit: "Crates", target_velocity: 300, daily_baseline_boxes: 300, daily_baseline_files: 2000, daily_baseline_pages: 0, daily_baseline_indexing: 6000, total_target: 15000, weekly_target: 1500, status: "Active", health: "Yellow", completion_percent: 25 },
+      { id: "p1", name: "Stanbic RSA", client_name: "Stanbic IBTC", activity_type: "Indexing", container_unit: "Boxes", assigned_lead_email: "adebayo@dataguard.ng", requires_page_count: false, requires_indexing_count: true, target_velocity: 200, daily_baseline_boxes: 200, daily_baseline_files: 1500, daily_baseline_pages: 0, daily_baseline_indexing: 4500, total_target: 12000, weekly_target: 1000, status: "Active", health: "Green", completion_percent: 45 },
+      { id: "p3", name: "Stanbic Ilupeju (Phase 5 - IBC)", client_name: "Stanbic IBTC", activity_type: "Scanned and Verified", container_unit: "Boxes", assigned_lead_email: "adebayo@dataguard.ng", requires_page_count: true, requires_indexing_count: true, target_velocity: 250, daily_baseline_boxes: 250, daily_baseline_files: 1800, daily_baseline_pages: 6000, daily_baseline_indexing: 5000, total_target: 15000, weekly_target: 1250, status: "Active", health: "Green", completion_percent: 60 },
+      { id: "p5", name: "Airtel", client_name: "Airtel Nigeria", activity_type: "Physical Archiving", container_unit: "Bags", assigned_lead_email: "emeka@dataguard.ng", requires_page_count: false, requires_indexing_count: false, target_velocity: 150, daily_baseline_boxes: 150, daily_baseline_files: 800, daily_baseline_pages: 0, daily_baseline_indexing: 0, total_target: 9000, weekly_target: 900, status: "Active", health: "Green", completion_percent: 38 },
+      { id: "p7", name: "Majekodunmi", client_name: "Majekodunmi & Associates", activity_type: "Scanning", container_unit: "Bags", assigned_lead_email: "chidinma@dataguard.ng", requires_page_count: true, requires_indexing_count: false, target_velocity: 300, daily_baseline_boxes: 300, daily_baseline_files: 2000, daily_baseline_pages: 7500, daily_baseline_indexing: 0, total_target: 15000, weekly_target: 1500, status: "Active", health: "Yellow", completion_percent: 25 },
     ];
   }
+}
+
+export async function fetchMyProjects(userEmail?: string, userId?: string): Promise<Project[]> {
+  try {
+    const params = new URLSearchParams();
+    if (userEmail) params.append("user_email", userEmail);
+    if (userId) params.append("user_id", userId);
+    const q = params.toString() ? `?${params.toString()}` : "";
+    return await apiFetch<Project[]>(`/projects/my-projects${q}`);
+  } catch {
+    return fetchProjects();
+  }
+}
+
+export async function createProject(data: Partial<Project>): Promise<{status: string; project: Project}> {
+  return apiFetch<{status: string; project: Project}>("/projects", {
+    method: "POST",
+    body: JSON.stringify(data),
+  });
+}
+
+export async function updateProject(id: string, updates: Partial<Project>): Promise<{status: string}> {
+  return apiFetch<{status: string}>(`/projects/${id}`, {
+    method: "PUT",
+    body: JSON.stringify(updates),
+  });
 }
 
 

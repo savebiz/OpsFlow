@@ -113,27 +113,97 @@
   "projects": [
     {
       "id": "p1",
-      "name": "Stanbic IBTC Records - Ilupeju Phase",
+      "name": "Stanbic RSA",
       "client_name": "Stanbic IBTC",
-      "activity_type": "Scanning & Indexing",
+      "activity_type": "Indexing",
       "container_unit": "Boxes",
+      "assigned_lead_email": "adebayo@dataguard.ng",
+      "requires_page_count": false,
+      "requires_indexing_count": true,
       "target_velocity": 200,
       "daily_baseline_boxes": 200,
       "daily_baseline_files": 1500,
-      "daily_baseline_pages": 5000,
+      "daily_baseline_pages": 0,
       "daily_baseline_indexing": 4500,
       "total_target": 12000,
       "weekly_target": 1000,
       "status": "Active",
       "health": "Green",
-      "completion_percent": 45.0
+      "completion_percent": 45.0,
+      "sla_target_date": "2026-10-30"
     },
     {
       "id": "p2",
-      "name": "Airtel Nigeria Archives",
+      "name": "Stanbic GMO",
+      "client_name": "Stanbic IBTC",
+      "activity_type": "Indexing",
+      "container_unit": "Boxes",
+      "assigned_lead_email": "adebayo@dataguard.ng",
+      "requires_page_count": false,
+      "requires_indexing_count": true,
+      "target_velocity": 180,
+      "daily_baseline_boxes": 180,
+      "daily_baseline_files": 1200,
+      "daily_baseline_pages": 0,
+      "daily_baseline_indexing": 4000,
+      "total_target": 10000,
+      "weekly_target": 900,
+      "status": "Active",
+      "health": "Green",
+      "completion_percent": 50.0,
+      "sla_target_date": "2026-10-25"
+    },
+    {
+      "id": "p3",
+      "name": "Stanbic Ilupeju (Phase 5 - IBC)",
+      "client_name": "Stanbic IBTC",
+      "activity_type": "Scanned and Verified",
+      "container_unit": "Boxes",
+      "assigned_lead_email": "adebayo@dataguard.ng",
+      "requires_page_count": true,
+      "requires_indexing_count": true,
+      "target_velocity": 250,
+      "daily_baseline_boxes": 250,
+      "daily_baseline_files": 1800,
+      "daily_baseline_pages": 6000,
+      "daily_baseline_indexing": 5000,
+      "total_target": 15000,
+      "weekly_target": 1250,
+      "status": "Active",
+      "health": "Green",
+      "completion_percent": 60.0,
+      "sla_target_date": "2026-11-15"
+    },
+    {
+      "id": "p4",
+      "name": "Maersk May 2026",
+      "client_name": "Maersk Line",
+      "activity_type": "Physical Archiving",
+      "container_unit": "Boxes",
+      "assigned_lead_email": "emeka@dataguard.ng",
+      "requires_page_count": false,
+      "requires_indexing_count": false,
+      "target_velocity": 150,
+      "daily_baseline_boxes": 150,
+      "daily_baseline_files": 900,
+      "daily_baseline_pages": 0,
+      "daily_baseline_indexing": 0,
+      "total_target": 8000,
+      "weekly_target": 750,
+      "status": "Active",
+      "health": "Green",
+      "completion_percent": 35.0,
+      "sla_target_date": "2026-10-20"
+    },
+    {
+      "id": "p5",
+      "name": "Airtel",
       "client_name": "Airtel Nigeria",
       "activity_type": "Physical Archiving",
       "container_unit": "Bags",
+      "assigned_lead_email": "emeka@dataguard.ng",
+      "requires_page_count": false,
+      "requires_indexing_count": false,
       "target_velocity": 150,
       "daily_baseline_boxes": 150,
       "daily_baseline_files": 800,
@@ -143,46 +213,76 @@
       "weekly_target": 900,
       "status": "Active",
       "health": "Green",
-      "completion_percent": 38.0
+      "completion_percent": 38.0,
+      "sla_target_date": "2026-10-31"
     },
     {
-      "id": "p3",
-      "name": "First Bank Digitization",
-      "client_name": "First Bank of Nigeria",
-      "activity_type": "Scanning",
+      "id": "p6",
+      "name": "Tangerine",
+      "client_name": "Tangerine Financial",
+      "activity_type": "Scanning & Indexing",
       "container_unit": "Boxes",
-      "target_velocity": 180,
-      "daily_baseline_boxes": 180,
-      "daily_baseline_files": 1200,
-      "daily_baseline_pages": 8000,
-      "daily_baseline_indexing": 0,
-      "total_target": 10800,
-      "weekly_target": 900,
+      "assigned_lead_email": "chidinma@dataguard.ng",
+      "requires_page_count": true,
+      "requires_indexing_count": true,
+      "target_velocity": 200,
+      "daily_baseline_boxes": 200,
+      "daily_baseline_files": 1400,
+      "daily_baseline_pages": 4500,
+      "daily_baseline_indexing": 4000,
+      "total_target": 11000,
+      "weekly_target": 1000,
       "status": "Active",
       "health": "Yellow",
-      "completion_percent": 30.0
+      "completion_percent": 28.0,
+      "sla_target_date": "2026-11-01"
     },
     {
-      "id": "p4",
-      "name": "Majekodunmi & Associates Indexing",
+      "id": "p7",
+      "name": "Majekodunmi",
       "client_name": "Majekodunmi & Associates",
-      "activity_type": "Indexing",
-      "container_unit": "Crates",
+      "activity_type": "Scanning",
+      "container_unit": "Bags",
+      "assigned_lead_email": "chidinma@dataguard.ng",
+      "requires_page_count": true,
+      "requires_indexing_count": false,
       "target_velocity": 300,
       "daily_baseline_boxes": 300,
       "daily_baseline_files": 2000,
-      "daily_baseline_pages": 0,
-      "daily_baseline_indexing": 6000,
+      "daily_baseline_pages": 7500,
+      "daily_baseline_indexing": 0,
       "total_target": 15000,
       "weekly_target": 1500,
       "status": "Active",
       "health": "Yellow",
-      "completion_percent": 25.0
+      "completion_percent": 25.0,
+      "sla_target_date": "2026-10-18"
+    },
+    {
+      "id": "p8",
+      "name": "Headquarters OPIC (General)",
+      "client_name": "DataGuard HQ",
+      "activity_type": "Quality Control (QC)",
+      "container_unit": "Boxes",
+      "assigned_lead_email": "adebayo@dataguard.ng",
+      "requires_page_count": true,
+      "requires_indexing_count": false,
+      "target_velocity": 400,
+      "daily_baseline_boxes": 400,
+      "daily_baseline_files": 2500,
+      "daily_baseline_pages": 10000,
+      "daily_baseline_indexing": 0,
+      "total_target": 20000,
+      "weekly_target": 2000,
+      "status": "Active",
+      "health": "Green",
+      "completion_percent": 70.0,
+      "sla_target_date": "2026-12-01"
     }
   ],
   "reports": [
     {
-      "id": "rpt-570074d3",
+      "id": "rpt-bbf85cbf",
       "project_id": "p1",
       "submitted_by": "u1",
       "submitted_by_name": "Adebayo Okonkwo",
@@ -197,7 +297,7 @@
       "created_at": "2026-08-31T17:30:00+01:00"
     },
     {
-      "id": "rpt-7bd4cffb",
+      "id": "rpt-c767fc7d",
       "project_id": "p2",
       "submitted_by": "u3",
       "submitted_by_name": "Emeka Adeyemi",
@@ -212,7 +312,7 @@
       "created_at": "2026-08-31T17:30:00+01:00"
     },
     {
-      "id": "rpt-13b626fc",
+      "id": "rpt-4fdff7a2",
       "project_id": "p3",
       "submitted_by": "u2",
       "submitted_by_name": "Chidinma Nwachukwu",
@@ -227,7 +327,7 @@
       "created_at": "2026-08-31T17:30:00+01:00"
     },
     {
-      "id": "rpt-1bfad458",
+      "id": "rpt-ebb5c9ab",
       "project_id": "p4",
       "submitted_by": "u4",
       "submitted_by_name": "Folake Bakare",
@@ -242,7 +342,7 @@
       "created_at": "2026-08-31T17:30:00+01:00"
     },
     {
-      "id": "rpt-ebfb3a03",
+      "id": "rpt-c5e8169e",
       "project_id": "p1",
       "submitted_by": "u1",
       "submitted_by_name": "Adebayo Okonkwo",
@@ -257,7 +357,7 @@
       "created_at": "2026-09-01T17:30:00+01:00"
     },
     {
-      "id": "rpt-7307bc8b",
+      "id": "rpt-8b650aba",
       "project_id": "p2",
       "submitted_by": "u3",
       "submitted_by_name": "Emeka Adeyemi",
@@ -272,7 +372,7 @@
       "created_at": "2026-09-01T17:30:00+01:00"
     },
     {
-      "id": "rpt-f94f6012",
+      "id": "rpt-268f8f48",
       "project_id": "p3",
       "submitted_by": "u2",
       "submitted_by_name": "Chidinma Nwachukwu",
@@ -287,7 +387,7 @@
       "created_at": "2026-09-01T17:30:00+01:00"
     },
     {
-      "id": "rpt-39075b57",
+      "id": "rpt-f390f02b",
       "project_id": "p4",
       "submitted_by": "u4",
       "submitted_by_name": "Folake Bakare",
@@ -302,7 +402,7 @@
       "created_at": "2026-09-01T17:30:00+01:00"
     },
     {
-      "id": "rpt-af8befd9",
+      "id": "rpt-4837394e",
       "project_id": "p1",
       "submitted_by": "u1",
       "submitted_by_name": "Adebayo Okonkwo",
@@ -317,7 +417,7 @@
       "created_at": "2026-09-02T17:30:00+01:00"
     },
     {
-      "id": "rpt-381279f3",
+      "id": "rpt-d8e80f78",
       "project_id": "p2",
       "submitted_by": "u3",
       "submitted_by_name": "Emeka Adeyemi",
@@ -332,7 +432,7 @@
       "created_at": "2026-09-02T17:30:00+01:00"
     },
     {
-      "id": "rpt-26ac3460",
+      "id": "rpt-fec39ec9",
       "project_id": "p3",
       "submitted_by": "u2",
       "submitted_by_name": "Chidinma Nwachukwu",
@@ -347,7 +447,7 @@
       "created_at": "2026-09-02T17:30:00+01:00"
     },
     {
-      "id": "rpt-41365d8f",
+      "id": "rpt-62f97827",
       "project_id": "p4",
       "submitted_by": "u4",
       "submitted_by_name": "Folake Bakare",
@@ -362,7 +462,7 @@
       "created_at": "2026-09-02T17:30:00+01:00"
     },
     {
-      "id": "rpt-c2a40783",
+      "id": "rpt-76d70ce2",
       "project_id": "p1",
       "submitted_by": "u1",
       "submitted_by_name": "Adebayo Okonkwo",
@@ -377,7 +477,7 @@
       "created_at": "2026-09-03T17:30:00+01:00"
     },
     {
-      "id": "rpt-1a15ceea",
+      "id": "rpt-9655495d",
       "project_id": "p2",
       "submitted_by": "u3",
       "submitted_by_name": "Emeka Adeyemi",
@@ -392,7 +492,7 @@
       "created_at": "2026-09-03T17:30:00+01:00"
     },
     {
-      "id": "rpt-8ead2a07",
+      "id": "rpt-ccf2c522",
       "project_id": "p3",
       "submitted_by": "u2",
       "submitted_by_name": "Chidinma Nwachukwu",
@@ -407,7 +507,7 @@
       "created_at": "2026-09-03T17:30:00+01:00"
     },
     {
-      "id": "rpt-61aaab0c",
+      "id": "rpt-397c70ec",
       "project_id": "p4",
       "submitted_by": "u4",
       "submitted_by_name": "Folake Bakare",
@@ -422,7 +522,7 @@
       "created_at": "2026-09-03T17:30:00+01:00"
     },
     {
-      "id": "rpt-979dd554",
+      "id": "rpt-b1669dd1",
       "project_id": "p1",
       "submitted_by": "u1",
       "submitted_by_name": "Adebayo Okonkwo",
@@ -437,7 +537,7 @@
       "created_at": "2026-09-04T17:30:00+01:00"
     },
     {
-      "id": "rpt-75efde79",
+      "id": "rpt-a312f1c5",
       "project_id": "p2",
       "submitted_by": "u3",
       "submitted_by_name": "Emeka Adeyemi",
@@ -452,7 +552,7 @@
       "created_at": "2026-09-04T17:30:00+01:00"
     },
     {
-      "id": "rpt-c3acf2b1",
+      "id": "rpt-7a277b87",
       "project_id": "p3",
       "submitted_by": "u2",
       "submitted_by_name": "Chidinma Nwachukwu",
@@ -467,7 +567,7 @@
       "created_at": "2026-09-04T17:30:00+01:00"
     },
     {
-      "id": "rpt-9967426e",
+      "id": "rpt-47f0b6b9",
       "project_id": "p4",
       "submitted_by": "u4",
       "submitted_by_name": "Folake Bakare",
@@ -482,7 +582,7 @@
       "created_at": "2026-09-04T17:30:00+01:00"
     },
     {
-      "id": "rpt-89bee71e",
+      "id": "rpt-b2885795",
       "project_id": "p1",
       "submitted_by": "u1",
       "submitted_by_name": "Adebayo Okonkwo",
@@ -497,7 +597,7 @@
       "created_at": "2026-09-07T17:30:00+01:00"
     },
     {
-      "id": "rpt-472d2f32",
+      "id": "rpt-2fef2266",
       "project_id": "p2",
       "submitted_by": "u3",
       "submitted_by_name": "Emeka Adeyemi",
@@ -512,7 +612,7 @@
       "created_at": "2026-09-07T17:30:00+01:00"
     },
     {
-      "id": "rpt-2998e6a8",
+      "id": "rpt-f20982dd",
       "project_id": "p3",
       "submitted_by": "u2",
       "submitted_by_name": "Chidinma Nwachukwu",
@@ -527,7 +627,7 @@
       "created_at": "2026-09-07T17:30:00+01:00"
     },
     {
-      "id": "rpt-335d016d",
+      "id": "rpt-74af37ac",
       "project_id": "p4",
       "submitted_by": "u4",
       "submitted_by_name": "Folake Bakare",
@@ -542,7 +642,7 @@
       "created_at": "2026-09-07T17:30:00+01:00"
     },
     {
-      "id": "rpt-86656bed",
+      "id": "rpt-c6b19c3c",
       "project_id": "p1",
       "submitted_by": "u1",
       "submitted_by_name": "Adebayo Okonkwo",
@@ -557,7 +657,7 @@
       "created_at": "2026-09-08T17:30:00+01:00"
     },
     {
-      "id": "rpt-7176488e",
+      "id": "rpt-ab2deacc",
       "project_id": "p2",
       "submitted_by": "u3",
       "submitted_by_name": "Emeka Adeyemi",
@@ -572,7 +672,7 @@
       "created_at": "2026-09-08T17:30:00+01:00"
     },
     {
-      "id": "rpt-896ecf9d",
+      "id": "rpt-29298658",
       "project_id": "p3",
       "submitted_by": "u2",
       "submitted_by_name": "Chidinma Nwachukwu",
@@ -587,7 +687,7 @@
       "created_at": "2026-09-08T17:30:00+01:00"
     },
     {
-      "id": "rpt-e43a2c4d",
+      "id": "rpt-670c4611",
       "project_id": "p4",
       "submitted_by": "u4",
       "submitted_by_name": "Folake Bakare",
@@ -602,7 +702,7 @@
       "created_at": "2026-09-08T17:30:00+01:00"
     },
     {
-      "id": "rpt-e6fbae19",
+      "id": "rpt-27c4cb1a",
       "project_id": "p1",
       "submitted_by": "u1",
       "submitted_by_name": "Adebayo Okonkwo",
@@ -617,7 +717,7 @@
       "created_at": "2026-09-09T17:30:00+01:00"
     },
     {
-      "id": "rpt-ef6957f5",
+      "id": "rpt-efdcdede",
       "project_id": "p2",
       "submitted_by": "u3",
       "submitted_by_name": "Emeka Adeyemi",
@@ -632,7 +732,7 @@
       "created_at": "2026-09-09T17:30:00+01:00"
     },
     {
-      "id": "rpt-755757a0",
+      "id": "rpt-3c63c8be",
       "project_id": "p3",
       "submitted_by": "u2",
       "submitted_by_name": "Chidinma Nwachukwu",
@@ -647,7 +747,7 @@
       "created_at": "2026-09-09T17:30:00+01:00"
     },
     {
-      "id": "rpt-4dfa1787",
+      "id": "rpt-b21f3541",
       "project_id": "p4",
       "submitted_by": "u4",
       "submitted_by_name": "Folake Bakare",
@@ -662,7 +762,7 @@
       "created_at": "2026-09-09T17:30:00+01:00"
     },
     {
-      "id": "rpt-ca80b1b9",
+      "id": "rpt-60da27a9",
       "project_id": "p1",
       "submitted_by": "u1",
       "submitted_by_name": "Adebayo Okonkwo",
@@ -677,7 +777,7 @@
       "created_at": "2026-09-10T17:30:00+01:00"
     },
     {
-      "id": "rpt-6d510301",
+      "id": "rpt-beff81ad",
       "project_id": "p2",
       "submitted_by": "u3",
       "submitted_by_name": "Emeka Adeyemi",
@@ -692,7 +792,7 @@
       "created_at": "2026-09-10T17:30:00+01:00"
     },
     {
-      "id": "rpt-2165809e",
+      "id": "rpt-bb505a27",
       "project_id": "p3",
       "submitted_by": "u2",
       "submitted_by_name": "Chidinma Nwachukwu",
@@ -707,7 +807,7 @@
       "created_at": "2026-09-10T17:30:00+01:00"
     },
     {
-      "id": "rpt-3a97cdc7",
+      "id": "rpt-745bb6b1",
       "project_id": "p4",
       "submitted_by": "u4",
       "submitted_by_name": "Folake Bakare",
@@ -722,7 +822,7 @@
       "created_at": "2026-09-10T17:30:00+01:00"
     },
     {
-      "id": "rpt-6262aef6",
+      "id": "rpt-2e852044",
       "project_id": "p1",
       "submitted_by": "u1",
       "submitted_by_name": "Adebayo Okonkwo",
@@ -737,7 +837,7 @@
       "created_at": "2026-09-11T17:30:00+01:00"
     },
     {
-      "id": "rpt-2d03a52c",
+      "id": "rpt-cc603a31",
       "project_id": "p2",
       "submitted_by": "u3",
       "submitted_by_name": "Emeka Adeyemi",
@@ -752,7 +852,7 @@
       "created_at": "2026-09-11T17:30:00+01:00"
     },
     {
-      "id": "rpt-8852eb10",
+      "id": "rpt-8d940f70",
       "project_id": "p3",
       "submitted_by": "u2",
       "submitted_by_name": "Chidinma Nwachukwu",
@@ -767,7 +867,7 @@
       "created_at": "2026-09-11T17:30:00+01:00"
     },
     {
-      "id": "rpt-967266da",
+      "id": "rpt-0cd4304b",
       "project_id": "p4",
       "submitted_by": "u4",
       "submitted_by_name": "Folake Bakare",
@@ -782,7 +882,7 @@
       "created_at": "2026-09-11T17:30:00+01:00"
     },
     {
-      "id": "rpt-063f8751",
+      "id": "rpt-e6395644",
       "project_id": "p1",
       "submitted_by": "u1",
       "submitted_by_name": "Adebayo Okonkwo",
@@ -797,120 +897,7 @@
       "created_at": "2026-09-12T16:45:00+01:00"
     },
     {
-      "id": "appsheet-f1c11782",
-      "project_id": "p1",
-      "submitted_by": "u1",
-      "submitted_by_name": "AppSheet Barcode Scanner",
-      "report_date": "2026-09-13",
-      "boxes_count": 10,
-      "files_count": 0,
-      "pages_count": 0,
-      "indexing_count": 0,
-      "status": "COMMITTED",
-      "created_at": "2026-09-13T03:10:01.696378+01:00",
-      "source": "AppSheet Webhook"
-    },
-    {
-      "id": "adhoc-rpt-255822e7",
-      "project_id": "p1",
-      "submitted_by": "adhoc-1380c539",
-      "submitted_by_name": "Test Worker",
-      "report_date": "2026-09-15",
-      "boxes_count": 50,
-      "files_count": 200,
-      "pages_count": 0,
-      "indexing_count": 0,
-      "status": "PENDING_TEAM_LEAD_REVIEW",
-      "created_at": "2026-09-13T17:36:50.064595+01:00",
-      "source": "Google Forms",
-      "anomaly_score": 0.0,
-      "anomaly_reason": null
-    },
-    {
-      "id": "adhoc-rpt-16617661",
-      "project_id": "p1",
-      "submitted_by": "adhoc-6710a1c0",
-      "submitted_by_name": "E2E Test Worker",
-      "report_date": "2026-09-13",
-      "boxes_count": 25,
-      "files_count": 150,
-      "pages_count": 500,
-      "indexing_count": 0,
-      "status": "COMMITTED",
-      "created_at": "2026-09-13T18:16:20.258101+01:00",
-      "source": "Team Lead On-Behalf",
-      "anomaly_score": 0.0,
-      "anomaly_reason": null
-    },
-    {
-      "id": "adhoc-rpt-4abe34e3",
-      "project_id": "p1",
-      "submitted_by": "adhoc-6710a1c0",
-      "submitted_by_name": "E2E Test Worker",
-      "report_date": "2026-09-13",
-      "boxes_count": 25,
-      "files_count": 150,
-      "pages_count": 500,
-      "indexing_count": 0,
-      "status": "COMMITTED",
-      "created_at": "2026-09-13T18:17:26.195338+01:00",
-      "source": "Team Lead On-Behalf",
-      "anomaly_score": 0.0,
-      "anomaly_reason": null
-    },
-    {
-      "id": "rpt-547cf697",
-      "project_id": "p1",
-      "submitted_by": "u1",
-      "report_date": "2026-12-01",
-      "boxes_count": 50,
-      "files_count": 300,
-      "pages_count": 1500,
-      "indexing_count": 1400,
-      "qc_failed_pages": 0,
-      "re_scan_count": 0,
-      "shift_type": "Morning",
-      "exception_note": null,
-      "submitted_by_name": "Adebayo Okonkwo",
-      "status": "COMMITTED",
-      "anomaly_score": 0.0,
-      "anomaly_reason": null,
-      "created_at": "2026-09-13T18:17:49.353462+01:00"
-    },
-    {
-      "id": "adhoc-rpt-884eefb1",
-      "project_id": "p1",
-      "submitted_by": "adhoc-6710a1c0",
-      "submitted_by_name": "E2E Test Worker",
-      "report_date": "2026-09-13",
-      "boxes_count": 25,
-      "files_count": 150,
-      "pages_count": 500,
-      "indexing_count": 0,
-      "status": "COMMITTED",
-      "created_at": "2026-09-13T18:17:49.458587+01:00",
-      "source": "Team Lead On-Behalf",
-      "anomaly_score": 0.0,
-      "anomaly_reason": null
-    },
-    {
-      "id": "adhoc-rpt-25454a0f",
-      "project_id": "p1",
-      "submitted_by": "adhoc-6710a1c0",
-      "submitted_by_name": "E2E Test Worker",
-      "report_date": "2026-09-13",
-      "boxes_count": 25,
-      "files_count": 150,
-      "pages_count": 500,
-      "indexing_count": 0,
-      "status": "COMMITTED",
-      "created_at": "2026-09-13T22:11:43.242390+01:00",
-      "source": "Team Lead On-Behalf",
-      "anomaly_score": 0.0,
-      "anomaly_reason": null
-    },
-    {
-      "id": "rpt-44d8292a",
+      "id": "rpt-72c82397",
       "project_id": "p1",
       "submitted_by": "u1",
       "report_date": "2026-12-15",
@@ -926,12 +913,12 @@
       "status": "COMMITTED",
       "anomaly_score": 0.0,
       "anomaly_reason": null,
-      "created_at": "2026-09-13T22:12:03.565626+01:00"
+      "created_at": "2026-09-13T23:28:06.551801+01:00"
     },
     {
-      "id": "adhoc-rpt-540d0727",
+      "id": "adhoc-rpt-3c8570b3",
       "project_id": "p1",
-      "submitted_by": "adhoc-6710a1c0",
+      "submitted_by": "adhoc-1d11b5d5",
       "submitted_by_name": "E2E Test Worker",
       "report_date": "2026-09-13",
       "boxes_count": 25,
@@ -939,7 +926,7 @@
       "pages_count": 500,
       "indexing_count": 0,
       "status": "COMMITTED",
-      "created_at": "2026-09-13T22:12:03.754026+01:00",
+      "created_at": "2026-09-13T23:28:06.685709+01:00",
       "source": "Team Lead On-Behalf",
       "anomaly_score": 0.0,
       "anomaly_reason": null
@@ -1005,404 +992,36 @@
       "sent_at": "2026-09-08T17:02:00+01:00"
     },
     {
-      "id": "nudge-3450e2b9",
+      "id": "nudge-4d5e9ef6",
       "target_user_id": "adhoc",
       "target_user_name": "E2E Test Worker",
       "target_phone": "+2348009990011",
       "project_id": "",
-      "project_name": "Stanbic IBTC Records - Ilupeju Phase",
+      "project_name": "Stanbic RSA",
       "nudge_type": "Onboarding",
       "channel": "WhatsApp",
       "status": "SENT_SANDBOX",
-      "message_body": "Welcome to DataGuard ArchiveOps!\n\nHello E2E Test Worker, you have been assigned to Stanbic IBTC Records - Ilupeju Phase. Your supervisor is Adebayo Okonkwo.\n\nHow far, make sure say you use this link submit your work every day:\nhttps://forms.dataguardng.com/adhoc/p1\n\nThank you!",
-      "sent_at": "2026-09-13T18:17:26.160128+01:00"
-    },
-    {
-      "id": "nudge-e8c7da03",
-      "target_user_id": "adhoc",
-      "target_user_name": "E2E Test Worker",
-      "target_phone": "+2348009990011",
-      "project_id": "",
-      "project_name": "Stanbic IBTC Records - Ilupeju Phase",
-      "nudge_type": "Onboarding",
-      "channel": "WhatsApp",
-      "status": "SENT_SANDBOX",
-      "message_body": "Welcome to DataGuard ArchiveOps!\n\nHello E2E Test Worker, you have been assigned to Stanbic IBTC Records - Ilupeju Phase. Your supervisor is Adebayo Okonkwo.\n\nHow far, make sure say you use this link submit your work every day:\nhttps://forms.dataguardng.com/adhoc/p1\n\nThank you!",
-      "sent_at": "2026-09-13T18:17:49.434884+01:00"
-    },
-    {
-      "id": "nudge-3df1c666",
-      "target_user_id": "adhoc",
-      "target_user_name": "E2E Test Worker",
-      "target_phone": "+2348009990011",
-      "project_id": "",
-      "project_name": "Stanbic IBTC Records - Ilupeju Phase",
-      "nudge_type": "Onboarding",
-      "channel": "WhatsApp",
-      "status": "SENT_SANDBOX",
-      "message_body": "Welcome to DataGuard OpsFlow!\n\nHello E2E Test Worker, you have been assigned to Stanbic IBTC Records - Ilupeju Phase. Your supervisor is Adebayo Okonkwo.\n\nHow far, make sure say you use this link submit your work every day:\nhttps://forms.dataguardng.com/adhoc/p1\n\nThank you!",
-      "sent_at": "2026-09-13T22:11:43.219989+01:00"
-    },
-    {
-      "id": "nudge-4336069a",
-      "target_user_id": "adhoc",
-      "target_user_name": "E2E Test Worker",
-      "target_phone": "+2348009990011",
-      "project_id": "",
-      "project_name": "Stanbic IBTC Records - Ilupeju Phase",
-      "nudge_type": "Onboarding",
-      "channel": "WhatsApp",
-      "status": "SENT_SANDBOX",
-      "message_body": "Welcome to DataGuard OpsFlow!\n\nHello E2E Test Worker, you have been assigned to Stanbic IBTC Records - Ilupeju Phase. Your supervisor is Adebayo Okonkwo.\n\nHow far, make sure say you use this link submit your work every day:\nhttps://forms.dataguardng.com/adhoc/p1\n\nThank you!",
-      "sent_at": "2026-09-13T22:12:03.715294+01:00"
+      "message_body": "Welcome to DataGuard OpsFlow!\n\nHello E2E Test Worker, you have been assigned to Stanbic RSA. Your supervisor is Adebayo Okonkwo.\n\nHow far, make sure say you use this link submit your work every day:\nhttps://forms.dataguardng.com/adhoc/p1\n\nThank you!",
+      "sent_at": "2026-09-13T23:28:06.652130+01:00"
     }
   ],
-  "summaries": [
-    {
-      "id": "synthesis-202609130155",
-      "period": "Week of September 07, 2026",
-      "summary_text": "Weekly throughput as of Sunday, September 13: 7,958 containers processed, 52,804 files handled, 123,386 pages scanned. Projects ahead of schedule: Stanbic IBTC Records - Ilupeju Phase (94% ahead), Airtel Nigeria Archives (65% ahead), First Bank Digitization (87% ahead), Majekodunmi & Associates Indexing (90% ahead). Recent exceptions: Hardware Failure at First Bank Digitization: Scanner breakdown on 2nd Sept \u2014 Fujitsu fi-7160 paper feed mechanism jammed. Technician called, ETA 24hrs.; Power Outage at Stanbic IBTC Records - Ilupeju Phase: Power outage on 8th Sept \u2014 PHCN outage from 10:00-15:00. Generator fuel exhausted at 13:00. Lost 5 hours of scanning.; Client Data Delay at Majekodunmi & Associates Indexing: Awaiting additional 500 crates from client warehouse. Expected delivery pushed to next week.. 1 report(s) flagged for anomaly review.",
-      "total_boxes": 7958,
-      "total_files": 52804,
-      "total_pages": 123386,
-      "overall_health": "Green",
-      "key_bottlenecks": [],
-      "flagged_reports": 1,
-      "projects": [
-        {
-          "project_id": "p1",
-          "project_name": "Stanbic IBTC Records - Ilupeju Phase",
-          "client": "Stanbic IBTC",
-          "activity_type": "Scanning & Indexing",
-          "container_unit": "Boxes",
-          "weekly_boxes": 1939,
-          "weekly_files": 14567,
-          "weekly_pages": 48568,
-          "weekly_indexing": 43711,
-          "weekly_target": 1000,
-          "velocity_percent": 193.9,
-          "health": "Green",
-          "total_processed": 1939,
-          "total_target": 12000,
-          "completion_percent": 16.2,
-          "reporting_days": 10
-        },
-        {
-          "project_id": "p2",
-          "project_name": "Airtel Nigeria Archives",
-          "client": "Airtel Nigeria",
-          "activity_type": "Physical Archiving",
-          "container_unit": "Bags",
-          "weekly_boxes": 1483,
-          "weekly_files": 7935,
-          "weekly_pages": 0,
-          "weekly_indexing": 0,
-          "weekly_target": 900,
-          "velocity_percent": 164.8,
-          "health": "Green",
-          "total_processed": 1483,
-          "total_target": 9000,
-          "completion_percent": 16.5,
-          "reporting_days": 10
-        },
-        {
-          "project_id": "p3",
-          "project_name": "First Bank Digitization",
-          "client": "First Bank of Nigeria",
-          "activity_type": "Scanning",
-          "container_unit": "Boxes",
-          "weekly_boxes": 1679,
-          "weekly_files": 11220,
-          "weekly_pages": 74818,
-          "weekly_indexing": 0,
-          "weekly_target": 900,
-          "velocity_percent": 186.6,
-          "health": "Green",
-          "total_processed": 1679,
-          "total_target": 10800,
-          "completion_percent": 15.5,
-          "reporting_days": 10
-        },
-        {
-          "project_id": "p4",
-          "project_name": "Majekodunmi & Associates Indexing",
-          "client": "Majekodunmi & Associates",
-          "activity_type": "Indexing",
-          "container_unit": "Crates",
-          "weekly_boxes": 2857,
-          "weekly_files": 19082,
-          "weekly_pages": 0,
-          "weekly_indexing": 57255,
-          "weekly_target": 1500,
-          "velocity_percent": 190.5,
-          "health": "Green",
-          "total_processed": 2857,
-          "total_target": 15000,
-          "completion_percent": 19.0,
-          "reporting_days": 10
-        }
-      ],
-      "generated_at": "2026-09-13T01:55:23.540819+01:00"
-    },
-    {
-      "id": "synthesis-202609130155",
-      "period": "Week of September 07, 2026",
-      "summary_text": "Weekly throughput as of Sunday, September 13: 7,958 containers processed, 52,804 files handled, 123,386 pages scanned. Projects ahead of schedule: Stanbic IBTC Records - Ilupeju Phase (94% ahead), Airtel Nigeria Archives (65% ahead), First Bank Digitization (87% ahead), Majekodunmi & Associates Indexing (90% ahead). Recent exceptions: Hardware Failure at First Bank Digitization: Scanner breakdown on 2nd Sept \u2014 Fujitsu fi-7160 paper feed mechanism jammed. Technician called, ETA 24hrs.; Power Outage at Stanbic IBTC Records - Ilupeju Phase: Power outage on 8th Sept \u2014 PHCN outage from 10:00-15:00. Generator fuel exhausted at 13:00. Lost 5 hours of scanning.; Client Data Delay at Majekodunmi & Associates Indexing: Awaiting additional 500 crates from client warehouse. Expected delivery pushed to next week.. 1 report(s) flagged for anomaly review.",
-      "total_boxes": 7958,
-      "total_files": 52804,
-      "total_pages": 123386,
-      "overall_health": "Green",
-      "key_bottlenecks": [],
-      "flagged_reports": 1,
-      "projects": [
-        {
-          "project_id": "p1",
-          "project_name": "Stanbic IBTC Records - Ilupeju Phase",
-          "client": "Stanbic IBTC",
-          "activity_type": "Scanning & Indexing",
-          "container_unit": "Boxes",
-          "weekly_boxes": 1939,
-          "weekly_files": 14567,
-          "weekly_pages": 48568,
-          "weekly_indexing": 43711,
-          "weekly_target": 1000,
-          "velocity_percent": 193.9,
-          "health": "Green",
-          "total_processed": 1939,
-          "total_target": 12000,
-          "completion_percent": 16.2,
-          "reporting_days": 10
-        },
-        {
-          "project_id": "p2",
-          "project_name": "Airtel Nigeria Archives",
-          "client": "Airtel Nigeria",
-          "activity_type": "Physical Archiving",
-          "container_unit": "Bags",
-          "weekly_boxes": 1483,
-          "weekly_files": 7935,
-          "weekly_pages": 0,
-          "weekly_indexing": 0,
-          "weekly_target": 900,
-          "velocity_percent": 164.8,
-          "health": "Green",
-          "total_processed": 1483,
-          "total_target": 9000,
-          "completion_percent": 16.5,
-          "reporting_days": 10
-        },
-        {
-          "project_id": "p3",
-          "project_name": "First Bank Digitization",
-          "client": "First Bank of Nigeria",
-          "activity_type": "Scanning",
-          "container_unit": "Boxes",
-          "weekly_boxes": 1679,
-          "weekly_files": 11220,
-          "weekly_pages": 74818,
-          "weekly_indexing": 0,
-          "weekly_target": 900,
-          "velocity_percent": 186.6,
-          "health": "Green",
-          "total_processed": 1679,
-          "total_target": 10800,
-          "completion_percent": 15.5,
-          "reporting_days": 10
-        },
-        {
-          "project_id": "p4",
-          "project_name": "Majekodunmi & Associates Indexing",
-          "client": "Majekodunmi & Associates",
-          "activity_type": "Indexing",
-          "container_unit": "Crates",
-          "weekly_boxes": 2857,
-          "weekly_files": 19082,
-          "weekly_pages": 0,
-          "weekly_indexing": 57255,
-          "weekly_target": 1500,
-          "velocity_percent": 190.5,
-          "health": "Green",
-          "total_processed": 2857,
-          "total_target": 15000,
-          "completion_percent": 19.0,
-          "reporting_days": 10
-        }
-      ],
-      "generated_at": "2026-09-13T01:55:24.848385+01:00"
-    },
-    {
-      "id": "synthesis-202609130155",
-      "period": "Week of September 07, 2026",
-      "summary_text": "Weekly throughput as of Sunday, September 13: 7,958 containers processed, 52,804 files handled, 123,386 pages scanned. Projects ahead of schedule: Stanbic IBTC Records - Ilupeju Phase (94% ahead), Airtel Nigeria Archives (65% ahead), First Bank Digitization (87% ahead), Majekodunmi & Associates Indexing (90% ahead). Recent exceptions: Hardware Failure at First Bank Digitization: Scanner breakdown on 2nd Sept \u2014 Fujitsu fi-7160 paper feed mechanism jammed. Technician called, ETA 24hrs.; Power Outage at Stanbic IBTC Records - Ilupeju Phase: Power outage on 8th Sept \u2014 PHCN outage from 10:00-15:00. Generator fuel exhausted at 13:00. Lost 5 hours of scanning.; Client Data Delay at Majekodunmi & Associates Indexing: Awaiting additional 500 crates from client warehouse. Expected delivery pushed to next week.. 1 report(s) flagged for anomaly review.",
-      "total_boxes": 7958,
-      "total_files": 52804,
-      "total_pages": 123386,
-      "overall_health": "Green",
-      "key_bottlenecks": [],
-      "flagged_reports": 1,
-      "projects": [
-        {
-          "project_id": "p1",
-          "project_name": "Stanbic IBTC Records - Ilupeju Phase",
-          "client": "Stanbic IBTC",
-          "activity_type": "Scanning & Indexing",
-          "container_unit": "Boxes",
-          "weekly_boxes": 1939,
-          "weekly_files": 14567,
-          "weekly_pages": 48568,
-          "weekly_indexing": 43711,
-          "weekly_target": 1000,
-          "velocity_percent": 193.9,
-          "health": "Green",
-          "total_processed": 1939,
-          "total_target": 12000,
-          "completion_percent": 16.2,
-          "reporting_days": 10
-        },
-        {
-          "project_id": "p2",
-          "project_name": "Airtel Nigeria Archives",
-          "client": "Airtel Nigeria",
-          "activity_type": "Physical Archiving",
-          "container_unit": "Bags",
-          "weekly_boxes": 1483,
-          "weekly_files": 7935,
-          "weekly_pages": 0,
-          "weekly_indexing": 0,
-          "weekly_target": 900,
-          "velocity_percent": 164.8,
-          "health": "Green",
-          "total_processed": 1483,
-          "total_target": 9000,
-          "completion_percent": 16.5,
-          "reporting_days": 10
-        },
-        {
-          "project_id": "p3",
-          "project_name": "First Bank Digitization",
-          "client": "First Bank of Nigeria",
-          "activity_type": "Scanning",
-          "container_unit": "Boxes",
-          "weekly_boxes": 1679,
-          "weekly_files": 11220,
-          "weekly_pages": 74818,
-          "weekly_indexing": 0,
-          "weekly_target": 900,
-          "velocity_percent": 186.6,
-          "health": "Green",
-          "total_processed": 1679,
-          "total_target": 10800,
-          "completion_percent": 15.5,
-          "reporting_days": 10
-        },
-        {
-          "project_id": "p4",
-          "project_name": "Majekodunmi & Associates Indexing",
-          "client": "Majekodunmi & Associates",
-          "activity_type": "Indexing",
-          "container_unit": "Crates",
-          "weekly_boxes": 2857,
-          "weekly_files": 19082,
-          "weekly_pages": 0,
-          "weekly_indexing": 57255,
-          "weekly_target": 1500,
-          "velocity_percent": 190.5,
-          "health": "Green",
-          "total_processed": 2857,
-          "total_target": 15000,
-          "completion_percent": 19.0,
-          "reporting_days": 10
-        }
-      ],
-      "generated_at": "2026-09-13T01:55:26.052452+01:00"
-    }
-  ],
+  "summaries": [],
   "adhoc_workers": [
     {
-      "id": "adhoc-1380c539",
-      "name": "Test Worker",
-      "phone": "+2348000000001",
-      "project_id": "p1",
-      "supervisor_id": "u1",
-      "status": "Active",
-      "registered_at": "2026-09-13T17:36:50.027707+01:00"
-    },
-    {
-      "id": "adhoc-6710a1c0",
+      "id": "adhoc-1d11b5d5",
       "name": "E2E Test Worker",
       "phone": "+2348009990011",
       "project_id": "p1",
       "supervisor_id": "u1",
       "status": "Active",
-      "registered_at": "2026-09-13T18:16:19.623849+01:00"
-    },
-    {
-      "id": "adhoc-5a711447",
-      "name": "E2E Test Worker",
-      "phone": "+2348009990011",
-      "project_id": "p1",
-      "supervisor_id": "u1",
-      "status": "Active",
-      "registered_at": "2026-09-13T18:17:26.123974+01:00"
-    },
-    {
-      "id": "adhoc-a51c8a6b",
-      "name": "E2E Test Worker",
-      "phone": "+2348009990011",
-      "project_id": "p1",
-      "supervisor_id": "u1",
-      "status": "Active",
-      "registered_at": "2026-09-13T18:17:49.405997+01:00"
-    },
-    {
-      "id": "adhoc-fe4a8486",
-      "name": "E2E Test Worker",
-      "phone": "+2348009990011",
-      "project_id": "p1",
-      "supervisor_id": "u1",
-      "status": "Active",
-      "registered_at": "2026-09-13T22:11:43.178160+01:00"
-    },
-    {
-      "id": "adhoc-6f1b3a05",
-      "name": "E2E Test Worker",
-      "phone": "+2348009990011",
-      "project_id": "p1",
-      "supervisor_id": "u1",
-      "status": "Active",
-      "registered_at": "2026-09-13T22:12:03.653203+01:00"
+      "registered_at": "2026-09-13T23:28:06.606214+01:00"
     }
   ],
   "portal_tokens": [
     {
-      "id": "87293b542790436793da4daafddbbfb5",
+      "id": "3ec563f326eb4bf3ad415f38874bef29",
       "project_id": "p1",
-      "created_at": "2026-09-13T17:36:50.106027+01:00"
-    },
-    {
-      "id": "918d4eefe16546b68249b08e4d278380",
-      "project_id": "p1",
-      "created_at": "2026-09-13T18:16:20.338357+01:00"
-    },
-    {
-      "id": "4aeb2bc34c074db18db72a8148d0693e",
-      "project_id": "p1",
-      "created_at": "2026-09-13T18:17:26.244066+01:00"
-    },
-    {
-      "id": "ab99ba218f3348f4bd445ad00ced2c34",
-      "project_id": "p1",
-      "created_at": "2026-09-13T18:17:49.504824+01:00"
-    },
-    {
-      "id": "8cb6943cae03474fa3e195072916637d",
-      "project_id": "p1",
-      "created_at": "2026-09-13T22:11:43.287340+01:00"
-    },
-    {
-      "id": "dfcf5138347d48d9b5905e7603a35289",
-      "project_id": "p1",
-      "created_at": "2026-09-13T22:12:03.805306+01:00"
+      "created_at": "2026-09-13T23:28:06.726286+01:00"
     }
   ]
 }

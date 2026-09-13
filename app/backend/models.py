@@ -8,7 +8,8 @@ class User(BaseModel):
     name: str
     email: str
     phone: str
-    role: str  # "Team Lead" or "Head of Client Services"
+    role: str  # "Admin" or "Team Lead"
+    active_status: str = "Active"  # "Active" or "Inactive"
     working_days: List[str] = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
     is_on_leave: bool = False
     assigned_projects: List[str] = []
@@ -18,8 +19,11 @@ class Project(BaseModel):
     id: str
     name: str
     client_name: str
-    activity_type: str  # "Scanning", "Indexing", "Scanning & Indexing", "Physical Archiving"
-    container_unit: str  # "Boxes", "Bags", "Crates"
+    activity_type: str  # "Scanning", "Indexing", "Quality Control (QC)", "Scanned and Verified"
+    container_unit: str = "Boxes"  # "Boxes", "Bags", "Crates"
+    assigned_lead_email: Optional[str] = "adebayo@dataguard.ng"
+    requires_page_count: bool = True
+    requires_indexing_count: bool = False
     target_velocity: int = 0
     daily_baseline_boxes: int = 0
     daily_baseline_files: int = 0
@@ -30,6 +34,7 @@ class Project(BaseModel):
     status: str = "Active"
     health: str = "Green"  # "Green", "Yellow", "Red"
     completion_percent: float = 0.0
+    sla_target_date: Optional[str] = "2026-10-30"
 
 
 class LoginRequest(BaseModel):

@@ -23,6 +23,7 @@ import {
   Package, Files, ScanLine, AlertTriangle, CheckCircle2, XCircle, Shield, RefreshCw, TrendingUp, Target, Clock, UserPlus
 } from "lucide-react";
 import WhatsAppSandbox from "./WhatsAppSandbox";
+import AdminProjectManager from "./AdminProjectManager";
 
 export default function ExecutiveDashboard() {
   const [stats, setStats] = useState<DashboardStats | null>(null);
@@ -33,6 +34,7 @@ export default function ExecutiveDashboard() {
   const [flaggedReports, setFlaggedReports] = useState<any[]>([]);
   const [chartData, setChartData] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
+  const [activeTab, setActiveTab] = useState<"dashboard" | "admin">("dashboard");
 
   const [isSynthesizing, setIsSynthesizing] = useState(false);
   const [isRunningCompliance, setIsRunningCompliance] = useState(false);
@@ -149,6 +151,20 @@ export default function ExecutiveDashboard() {
           <p className="text-gray-400 text-sm">DataGuard Document Management — Real-time Operations</p>
         </div>
         <div className="flex items-center gap-3 flex-wrap">
+          <div className="flex items-center p-1 bg-white/5 border border-white/10 rounded-xl mr-2">
+            <button
+              onClick={() => setActiveTab("dashboard")}
+              className={`px-3.5 py-1.5 text-xs font-semibold rounded-lg transition-all ${activeTab === "dashboard" ? "bg-emerald-500 text-slate-950 shadow-md" : "text-gray-400 hover:text-white"}`}
+            >
+              Operations Overview
+            </button>
+            <button
+              onClick={() => setActiveTab("admin")}
+              className={`px-3.5 py-1.5 text-xs font-semibold rounded-lg transition-all ${activeTab === "admin" ? "bg-emerald-500 text-slate-950 shadow-md" : "text-gray-400 hover:text-white"}`}
+            >
+              Admin Setup & Rules
+            </button>
+          </div>
           <button onClick={handleSheetsSync} disabled={isSyncingSheets} className="flex items-center gap-2 px-4 py-2 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 text-sm text-gray-200 transition-colors disabled:opacity-50">
             <RefreshCw size={16} className={`text-emerald-400 ${isSyncingSheets ? "animate-spin" : ""}`} />
             {isSyncingSheets ? "Syncing Sheets..." : "Sync Sheets"}
@@ -164,6 +180,11 @@ export default function ExecutiveDashboard() {
           </a>
         </div>
       </div>
+
+      {activeTab === "admin" ? (
+        <AdminProjectManager />
+      ) : (
+        <>
       {syncStatusMsg && (
         <div className="p-3 bg-emerald-500/10 border border-emerald-500/20 text-emerald-300 rounded-xl text-xs flex items-center justify-between">
           <span>{syncStatusMsg}</span>
@@ -492,6 +513,8 @@ export default function ExecutiveDashboard() {
           </GlassCard>
         </div>
       </div>
+      </>
+      )}
 
       <WhatsAppSandbox isOpen={showWhatsApp} onClose={() => setShowWhatsApp(false)} />
     </div>

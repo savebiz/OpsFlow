@@ -6,7 +6,7 @@ import { GlassCard } from "./ui/GlassCard";
 import { GradientButton } from "./ui/GradientButton";
 import { HealthBadge } from "./ui/HealthBadge";
 import { AlertTriangle, CheckCircle2, Loader2, UploadCloud, ChevronDown } from "lucide-react";
-import { fetchProjects, submitDailyReport, fetchReports, type Project, type ReportSubmission } from "@/lib/api";
+import { fetchProjects, fetchMyProjects, submitDailyReport, fetchReports, type Project, type ReportSubmission } from "@/lib/api";
 
 export default function TeamLeadIntake() {
   const [projects, setProjects] = useState<Project[]>([]);
@@ -39,7 +39,8 @@ export default function TeamLeadIntake() {
   }, [selectedProject]);
 
   async function loadProjects() {
-    const data = await fetchProjects();
+    const myUser = typeof window !== "undefined" ? localStorage.getItem("opsflow_user_email") || "adebayo@dataguard.ng" : "adebayo@dataguard.ng";
+    const data = await fetchMyProjects(myUser);
     setProjects(data);
     if (data.length > 0) setSelectedProject(data[0]);
   }
@@ -60,9 +61,9 @@ export default function TeamLeadIntake() {
   const isPagesAnomaly = selectedProject && selectedProject.daily_baseline_pages > 0 && pagesVal > selectedProject.daily_baseline_pages * 3;
   const isQcWarning = pagesVal > 0 && qcVal > pagesVal * 0.1; // >10% QC fail rate
 
-  // Dynamic field visibility based on activity_type
-  const showPages = selectedProject?.activity_type?.includes("Scanning");
-  const showIndexing = selectedProject?.activity_type?.includes("Indexing");
+  // Dynamic field visibility based on project rules & activity type
+  const showPages = selectedProject?.requires_page_count ?? (selectedProject?.activity_type?.includes("Scanning") || selectedProject?.activity_type?.includes("Verified"));
+  const showIndexing = selectedProject?.requires_indexing_count ?? selectedProject?.activity_type?.includes("Indexing");
 
   // Client initials for logo
   const clientInitials = selectedProject?.client_name?.split(" ").map((w: string) => w[0]).join("").substring(0, 2).toUpperCase() || "??";
